@@ -20,6 +20,10 @@
       "matchDepTypes": ["dependencies", "require"],
       "semanticCommitType": "deps",
       "semanticCommitScope": null
+    },
+    {
+      "matchDepNames": "node-altjtalk-binding",
+      "versioning": "regex:^https://github.com/femshima/node-altjtalk-binding/releases/download/v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)/node.tar.gz$"
     }
   ]
 }

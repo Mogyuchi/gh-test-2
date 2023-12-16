@@ -18,8 +18,8 @@ jobs:
       - uses: google-github-actions/release-please-action@a2d8d683f209466ee8c695cd994ae2cf08b1642d # v4.0.1
         id: release-please
         with:
-          config-file: .github/workflows/release/release-please-config.json
-          manifest-file: .github/workflows/release/.release-please-manifest.json
+          config-file: .github/actions/release/release-please-config.json
+          manifest-file: .github/actions/release/.release-please-manifest.json
 
   label-published:
     needs: [release-please]
