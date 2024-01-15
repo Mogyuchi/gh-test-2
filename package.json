@@ -1,6 +1,6 @@
 {
     "name": "test",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "private": true,
     "dependencies": {
         "node-altjtalk-binding": "https://github.com/femshima/node-altjtalk-binding/releases/download/v0.1.2/node.tar.gz"
