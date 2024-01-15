@@ -31,7 +31,7 @@ jobs:
       GH_REPO: ${{ github.repository }}
     runs-on: ubuntu-latest
     steps:
-      run: gh release edit ${{ needs.release-please.outputs.tag_name }} --draft=false
+      - run: gh release edit ${{ needs.release-please.outputs.tag_name }} --draft=false
 
   label-published:
     needs: [release-please]
