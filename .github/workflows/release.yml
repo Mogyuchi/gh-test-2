@@ -21,6 +21,18 @@ jobs:
           config-file: .github/actions/release/release-please-config.json
           manifest-file: .github/actions/release/.release-please-manifest.json
 
+  publish-release:
+    needs: [release-please]
+    if: ${{ needs.release-please.outputs.release_created }}
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+    runs-on: ubuntu-latest
+    steps:
+      run: gh release edit ${{ needs.release-please.outputs.tag_name }} --draft=false
+
   label-published:
     needs: [release-please]
     if: ${{ needs.release-please.outputs.release_created }}
